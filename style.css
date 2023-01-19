@@ -1,0 +1,14 @@
+#container {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows:  repeat(16, 1fr);
+
+}
+
+.pixels {
+  background-color: black;
+  width: 25px;
+  height: 25px;
+
+}
