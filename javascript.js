@@ -1,16 +1,18 @@
 const containerDiv = document.getElementById("container");
 const refreshButton = document.getElementById("refresh");
 refreshButton.addEventListener("click", refreshCanvas);
-createCanvas();
 
+let canvasSize = 16;
 
+createCanvas(canvasSize);
 
-function createCanvas(){
+function createCanvas(canvasSize){
   while (containerDiv.firstChild) {
     containerDiv.removeChild(containerDiv.firstChild);
   }  
-  
-  for(let i = 0; i < 256; i++) {
+
+
+  for(let i = 0; i < canvasSize ** 2; i++) {
     let pixel = document.createElement("div");
     pixel.className = "pixels";
     pixel.addEventListener("mouseover", (event => {pixel.classList.add("color");}));
@@ -19,5 +21,6 @@ function createCanvas(){
 }
 
 function refreshCanvas() {
-  createCanvas();
+  canvasSize = prompt("Type in the desired canvas size");
+  createCanvas(canvasSize);
 }
