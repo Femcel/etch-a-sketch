@@ -16,9 +16,8 @@ body {
   background-color: black;
   width: 25px;
   height: 25px;
-
 }
 
-.pixels:hover {
+.color {
   background-color: beige;
 }
