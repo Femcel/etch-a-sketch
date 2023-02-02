@@ -10,7 +10,7 @@ function createCanvas(canvasSize){
   while (containerDiv.firstChild) {
     containerDiv.removeChild(containerDiv.firstChild);
   }  
-
+  containerDiv.setAttribute('style', 'grid-template-columns: repeat(' + canvasSize + ', 1fr)');
 
   for(let i = 0; i < canvasSize ** 2; i++) {
     let pixel = document.createElement("div");
